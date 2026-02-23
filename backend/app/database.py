@@ -5,4 +5,4 @@ client = AsyncIOMotorClient(settings.MONGO_URL)
 
 database = client[settings.DATABASE_NAME]
 
-chat_collection = database.get_collection("chat_history")
+chat_collection = database.get_collection("chat-history")
