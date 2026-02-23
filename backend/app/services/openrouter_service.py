@@ -14,7 +14,7 @@ def ask_ai(question: str):
                 "X-Title": "AI Portfolio",
             },
             json={
-                "model": "mistralai/mistral-7b-instruct",
+                "model": "meta-llama/llama-3-8b-instruct",
                 "messages": [
                     {"role": "system", "content": RESUME_CONTEXT},
                     {"role": "user", "content": question}
