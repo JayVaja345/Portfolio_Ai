@@ -1,7 +1,9 @@
 import axios from "axios";
 
+// const RENDER_BACKEND_URL = "https://portfolio-ai-m6w2.onrender.com";
+
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 export const sendMessage = async (question: string) => {
