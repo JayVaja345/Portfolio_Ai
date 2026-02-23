@@ -14,3 +14,11 @@ app.add_middleware(
 )
 
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
+
+@app.get("/")
+async def root():
+    return {"message": "Backend is running"}
+
+@app.get("/health")
+async def health():
+    return {"status": "healthy", "url": "https://portfolio-ai-m6w2.onrender.com"}
